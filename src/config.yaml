@@ -1,0 +1,44 @@
+options:
+  driver-source:
+    type: string
+    default:
+    description: |
+      Optional configuration to support use of additional sources such as:
+        - ppa:myteam/ppa
+        - cloud:trusty-proposed/kilo
+        - http://my.archive.com/ubuntu main
+      The last option should be used in conjunction with the key configuration
+      option.
+  driver-key:
+    type: string
+    default:
+    description: |
+      Key ID to import to the apt keyring to support use with arbitary source
+      configuration from outside of Launchpad archives or PPA's.
+  volume-dd-blocksize:
+    default: 512
+    type: int
+  nas-login:
+    default:
+    type: string
+  nas-password:
+    default:
+    type: string
+  nas-server-hostname:
+    default:
+    type: string
+  nas-volume-backend-name:
+    default: iXsystems_FREENAS_Storage
+    type: string
+  nas-iqn-prefix:
+    default:
+    type: string
+  nas-datastore-pool:
+    default:
+    type: string
+  nas-vendor-name:
+    default: iXsystems
+    type: string
+  nas-storage-protocol:
+    default: iscsi
+    type: string

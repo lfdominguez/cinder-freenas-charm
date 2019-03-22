@@ -1,0 +1,25 @@
+name: cinder-freenas
+display-name: Cinder - FreeNAS
+summary: FreeNAS integration for OpenStack Block Storage
+maintainer: OpenStack Charmers <openstack-charmers@lists.ubuntu.com>
+description: |
+ Cinder is the block storage service for the Openstack project.
+ .
+ This charm provides a FreeNAS backend for Cinder
+tags:
+  - openstack
+  - storage
+  - file-servers
+  - misc
+series:
+  - xenial
+  - bionic
+subordinate: true
+provides:
+  storage-backend:
+    interface: cinder-backend
+    scope: container
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
