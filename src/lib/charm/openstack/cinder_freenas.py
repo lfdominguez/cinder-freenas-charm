@@ -9,7 +9,7 @@ class CinderFreeNASCharm(
     name = 'cinder_freenas'
     version_package = 'python-cinder-freenas'
     release = 'ocata'
-    packages = [version_package]
+    packages = [version_package, 'python3-cinder']
     stateless = True
     # Specify any config that the user *must* set.
     mandatory_config = ['nas-login', 'nas-password', 'nas-server-hostname',
@@ -42,4 +42,4 @@ class CinderFreeNASCharmRocky(CinderFreeNASCharm):
     # Rocky needs py3 packages.
     release = 'rocky'
     version_package = 'python-cinder-freenas'
-    packages = [version_package]
+    packages = [version_package, 'python3-cinder']
